@@ -70,3 +70,21 @@ Add a compact request-status comparison, keeping redirects and failed responses 
 - https://docs.python.org/3/library/urllib.robotparser.html
 - https://docs.python.org/3/library/urllib.request.html
 - https://www.rfc-editor.org/rfc/rfc9116.html
+
+## INSTALL DIRECTLY FROM GITHUB
+
+Requires Python 3.9+, Git, and a Debian-based Linux desktop.
+
+Copy and paste:
+
+```bash
+mkdir -p ~/PhantomLabsTools &&
+git clone https://github.com/Hellfire13666/cinderjaw-furnace.git ~/PhantomLabsTools/cinderjaw-v0.2.0 &&
+cd ~/PhantomLabsTools/cinderjaw-v0.2.0 &&
+python3 -m unittest -q &&
+python3 INSTALL_DESKTOP.py &&
+python3 OPEN_CINDERJAW.py
+```
+
+No API keys or sudo required. Keep the installed folder in place.
+
