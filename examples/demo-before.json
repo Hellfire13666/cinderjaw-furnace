@@ -1,0 +1,167 @@
+{
+  "tool": "CINDERJAW",
+  "version": "0.2.0",
+  "target": "https://example.com/",
+  "started_utc": "2026-10-25T18:27:30.356881+00:00",
+  "pages": [
+    {
+      "url": "https://example.com/",
+      "title": "Fictional Ember Workshop",
+      "metadata": {
+        "generator": "Synthetic Demo"
+      },
+      "canonical": [
+        "https://example.com/"
+      ],
+      "links": [
+        "https://example.com/about",
+        "https://example.com/private/",
+        "https://social.example.org/ember"
+      ],
+      "scripts": [
+        "https://static.example.net/forge.js"
+      ],
+      "stylesheets": [
+        "https://example.com/style.css"
+      ],
+      "frames": [],
+      "forms": [
+        {
+          "action": "https://example.com/contact",
+          "method": "POST"
+        }
+      ],
+      "truncated_lists": false
+    },
+    {
+      "url": "https://example.com/about",
+      "title": "About the fictional workshop",
+      "metadata": {},
+      "canonical": [],
+      "links": [
+        "https://example.com/"
+      ],
+      "scripts": [],
+      "stylesheets": [],
+      "frames": [],
+      "forms": [],
+      "truncated_lists": false
+    }
+  ],
+  "policies": [
+    {
+      "url": "https://example.com/robots.txt",
+      "kind": "robots",
+      "text": "User-agent: *\nDisallow: /private/\nSitemap: https://example.com/sitemap.xml",
+      "text_truncated": false
+    },
+    {
+      "url": "https://example.com/.well-known/security.txt",
+      "kind": "security.txt",
+      "text": "Contact: mailto:security@example.com\nExpires: 2030-01-01T00:00:00Z",
+      "text_truncated": false
+    }
+  ],
+  "sitemaps": [
+    {
+      "url": "https://example.com/sitemap.xml",
+      "locations": [
+        "https://example.com/about"
+      ],
+      "parse_status": "urlset"
+    }
+  ],
+  "skipped": [
+    {
+      "url": "https://example.com/private/",
+      "reason": "robots disallow"
+    },
+    {
+      "url": "https://social.example.org/ember",
+      "reason": "external origin; recorded only"
+    }
+  ],
+  "request_budget": 20,
+  "max_pages": 5,
+  "limitations": [
+    "FICTIONAL OFFLINE DEMO \u2014 NOT LIVE FINDINGS"
+  ],
+  "robots_delay": null,
+  "robots_request_rate": "None",
+  "requests": [
+    {
+      "url": "https://example.com/robots.txt",
+      "time_utc": "2026-10-25T18:27:30.356921+00:00",
+      "status": 200,
+      "headers": {
+        "content-type": "text/plain",
+        "server": "SYNTHETIC DEMO"
+      },
+      "cookies": [],
+      "truncated": false,
+      "source": "OFFLINE FICTIONAL FIXTURE"
+    },
+    {
+      "url": "https://example.com/",
+      "time_utc": "2026-10-25T18:27:30.357333+00:00",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html",
+        "server": "SYNTHETIC DEMO"
+      },
+      "cookies": [],
+      "truncated": false,
+      "source": "OFFLINE FICTIONAL FIXTURE"
+    },
+    {
+      "url": "https://example.com/.well-known/security.txt",
+      "time_utc": "2026-10-25T18:27:30.357832+00:00",
+      "status": 200,
+      "headers": {
+        "content-type": "text/plain",
+        "server": "SYNTHETIC DEMO"
+      },
+      "cookies": [],
+      "truncated": false,
+      "source": "OFFLINE FICTIONAL FIXTURE"
+    },
+    {
+      "url": "https://example.com/sitemap.xml",
+      "time_utc": "2026-10-25T18:27:30.357865+00:00",
+      "status": 200,
+      "headers": {
+        "content-type": "application/xml",
+        "server": "SYNTHETIC DEMO"
+      },
+      "cookies": [],
+      "truncated": false,
+      "source": "OFFLINE FICTIONAL FIXTURE"
+    },
+    {
+      "url": "https://example.com/about",
+      "time_utc": "2026-10-25T18:27:30.358095+00:00",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html",
+        "server": "SYNTHETIC DEMO"
+      },
+      "cookies": [],
+      "truncated": false,
+      "source": "OFFLINE FICTIONAL FIXTURE"
+    }
+  ],
+  "finished_utc": "2026-10-25T18:27:30.358209+00:00",
+  "external_hosts": [
+    "social.example.org",
+    "static.example.net"
+  ],
+  "summary": {
+    "http_requests": 5,
+    "pages": 2,
+    "scripts": 1,
+    "forms": 1,
+    "external_hosts": 2,
+    "transport_failures": 0
+  },
+  "demo": "FICTIONAL OFFLINE DATA"
+}

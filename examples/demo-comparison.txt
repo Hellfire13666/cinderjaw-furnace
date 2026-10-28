@@ -1,0 +1,86 @@
+FICTIONAL OFFLINE DEMO DATA
+CINDERJAW / AFTERBURN COMPARISON
+https://example.com/
+Snapshot differences are observations, not proof of removal or vulnerability. Page limits, failed requests, robots rules and collection settings affect coverage.
+
+PAGES: +0 newly observed / 0 not observed again
+
+SCRIPTS: +1 newly observed / 0 not observed again
+  NEW https://static.example.net/widget.js
+
+STYLESHEETS: +0 newly observed / 0 not observed again
+
+FRAMES: +0 newly observed / 0 not observed again
+
+FORMS: +1 newly observed / 1 not observed again
+  NEW {"action": "https://example.com/support", "method": "POST", "page": "https://example.com/"}
+  NOT OBSERVED AGAIN {"action": "https://example.com/contact", "method": "POST", "page": "https://example.com/"}
+
+LINKS: +0 newly observed / 0 not observed again
+
+EXTERNAL_HOSTS: +0 newly observed / 0 not observed again
+
+POLICY TEXT CHANGES
+[
+  {
+    "url": "https://example.com/.well-known/security.txt",
+    "before": "Contact: mailto:security@example.com\nExpires: 2030-01-01T00:00:00Z",
+    "after": "Contact: mailto:disclosure@example.com\nExpires: 2030-01-01T00:00:00Z",
+    "partial_capture": false
+  }
+]
+
+HEADER CHANGES
+[
+  {
+    "url": "https://example.com/",
+    "header": "x-frame-options",
+    "before": null,
+    "after": "DENY"
+  }
+]
+
+COVERAGE
+[
+  {
+    "snapshot": "before",
+    "summary": {
+      "http_requests": 5,
+      "pages": 2,
+      "scripts": 1,
+      "forms": 1,
+      "external_hosts": 2,
+      "transport_failures": 0
+    },
+    "max_pages": 5,
+    "request_budget": 20,
+    "limitations": [
+      "FICTIONAL OFFLINE DEMO \u2014 NOT LIVE FINDINGS"
+    ],
+    "truncated_responses": 0,
+    "truncated_page_lists": 0,
+    "failed_requests": 0
+  },
+  {
+    "snapshot": "after",
+    "summary": {
+      "http_requests": 5,
+      "pages": 2,
+      "scripts": 2,
+      "forms": 1,
+      "external_hosts": 2,
+      "transport_failures": 0
+    },
+    "max_pages": 5,
+    "request_budget": 20,
+    "limitations": [
+      "FICTIONAL OFFLINE DEMO \u2014 NOT LIVE FINDINGS"
+    ],
+    "truncated_responses": 0,
+    "truncated_page_lists": 0,
+    "failed_requests": 0
+  }
+]
+
+INPUT PROVENANCE
+{}

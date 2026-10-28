@@ -1,0 +1,86 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'"><title>CINDERJAW comparison</title><style>body{background:#101112;color:#eee7d7;font:16px/1.6 monospace;margin:25px}h1{color:#ff7524}pre{white-space:pre-wrap;overflow-wrap:anywhere;border-left:4px solid #ff7524;padding:20px;background:#191b1c}</style><h1>CINDERJAW / AFTERBURN</h1><pre>FICTIONAL OFFLINE DEMO DATA
+CINDERJAW / AFTERBURN COMPARISON
+https://example.com/
+Snapshot differences are observations, not proof of removal or vulnerability. Page limits, failed requests, robots rules and collection settings affect coverage.
+
+PAGES: +0 newly observed / 0 not observed again
+
+SCRIPTS: +1 newly observed / 0 not observed again
+  NEW https://static.example.net/widget.js
+
+STYLESHEETS: +0 newly observed / 0 not observed again
+
+FRAMES: +0 newly observed / 0 not observed again
+
+FORMS: +1 newly observed / 1 not observed again
+  NEW {&quot;action&quot;: &quot;https://example.com/support&quot;, &quot;method&quot;: &quot;POST&quot;, &quot;page&quot;: &quot;https://example.com/&quot;}
+  NOT OBSERVED AGAIN {&quot;action&quot;: &quot;https://example.com/contact&quot;, &quot;method&quot;: &quot;POST&quot;, &quot;page&quot;: &quot;https://example.com/&quot;}
+
+LINKS: +0 newly observed / 0 not observed again
+
+EXTERNAL_HOSTS: +0 newly observed / 0 not observed again
+
+POLICY TEXT CHANGES
+[
+  {
+    &quot;url&quot;: &quot;https://example.com/.well-known/security.txt&quot;,
+    &quot;before&quot;: &quot;Contact: mailto:security@example.com\nExpires: 2030-01-01T00:00:00Z&quot;,
+    &quot;after&quot;: &quot;Contact: mailto:disclosure@example.com\nExpires: 2030-01-01T00:00:00Z&quot;,
+    &quot;partial_capture&quot;: false
+  }
+]
+
+HEADER CHANGES
+[
+  {
+    &quot;url&quot;: &quot;https://example.com/&quot;,
+    &quot;header&quot;: &quot;x-frame-options&quot;,
+    &quot;before&quot;: null,
+    &quot;after&quot;: &quot;DENY&quot;
+  }
+]
+
+COVERAGE
+[
+  {
+    &quot;snapshot&quot;: &quot;before&quot;,
+    &quot;summary&quot;: {
+      &quot;http_requests&quot;: 5,
+      &quot;pages&quot;: 2,
+      &quot;scripts&quot;: 1,
+      &quot;forms&quot;: 1,
+      &quot;external_hosts&quot;: 2,
+      &quot;transport_failures&quot;: 0
+    },
+    &quot;max_pages&quot;: 5,
+    &quot;request_budget&quot;: 20,
+    &quot;limitations&quot;: [
+      &quot;FICTIONAL OFFLINE DEMO \u2014 NOT LIVE FINDINGS&quot;
+    ],
+    &quot;truncated_responses&quot;: 0,
+    &quot;truncated_page_lists&quot;: 0,
+    &quot;failed_requests&quot;: 0
+  },
+  {
+    &quot;snapshot&quot;: &quot;after&quot;,
+    &quot;summary&quot;: {
+      &quot;http_requests&quot;: 5,
+      &quot;pages&quot;: 2,
+      &quot;scripts&quot;: 2,
+      &quot;forms&quot;: 1,
+      &quot;external_hosts&quot;: 2,
+      &quot;transport_failures&quot;: 0
+    },
+    &quot;max_pages&quot;: 5,
+    &quot;request_budget&quot;: 20,
+    &quot;limitations&quot;: [
+      &quot;FICTIONAL OFFLINE DEMO \u2014 NOT LIVE FINDINGS&quot;
+    ],
+    &quot;truncated_responses&quot;: 0,
+    &quot;truncated_page_lists&quot;: 0,
+    &quot;failed_requests&quot;: 0
+  }
+]
+
+INPUT PROVENANCE
+{}</pre></html>

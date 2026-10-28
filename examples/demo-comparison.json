@@ -1,0 +1,102 @@
+{
+  "tool": "CINDERJAW-DIFF",
+  "version": "0.2.0",
+  "target": "https://example.com/",
+  "time_utc": "2026-10-25T18:27:30.358942+00:00",
+  "before_time": "2026-10-25T18:27:30.356881+00:00",
+  "after_time": "2026-10-25T18:27:30.356881+00:00",
+  "notice": "Snapshot differences are observations, not proof of removal or vulnerability. Page limits, failed requests, robots rules and collection settings affect coverage.",
+  "fictional_data": true,
+  "inventory_changes": {
+    "pages": {
+      "newly_observed": [],
+      "not_observed_again": []
+    },
+    "scripts": {
+      "newly_observed": [
+        "https://static.example.net/widget.js"
+      ],
+      "not_observed_again": []
+    },
+    "stylesheets": {
+      "newly_observed": [],
+      "not_observed_again": []
+    },
+    "frames": {
+      "newly_observed": [],
+      "not_observed_again": []
+    },
+    "forms": {
+      "newly_observed": [
+        "{\"action\": \"https://example.com/support\", \"method\": \"POST\", \"page\": \"https://example.com/\"}"
+      ],
+      "not_observed_again": [
+        "{\"action\": \"https://example.com/contact\", \"method\": \"POST\", \"page\": \"https://example.com/\"}"
+      ]
+    },
+    "links": {
+      "newly_observed": [],
+      "not_observed_again": []
+    },
+    "external_hosts": {
+      "newly_observed": [],
+      "not_observed_again": []
+    }
+  },
+  "policy_text_changes": [
+    {
+      "url": "https://example.com/.well-known/security.txt",
+      "before": "Contact: mailto:security@example.com\nExpires: 2030-01-01T00:00:00Z",
+      "after": "Contact: mailto:disclosure@example.com\nExpires: 2030-01-01T00:00:00Z",
+      "partial_capture": false
+    }
+  ],
+  "header_changes": [
+    {
+      "url": "https://example.com/",
+      "header": "x-frame-options",
+      "before": null,
+      "after": "DENY"
+    }
+  ],
+  "coverage": [
+    {
+      "snapshot": "before",
+      "summary": {
+        "http_requests": 5,
+        "pages": 2,
+        "scripts": 1,
+        "forms": 1,
+        "external_hosts": 2,
+        "transport_failures": 0
+      },
+      "max_pages": 5,
+      "request_budget": 20,
+      "limitations": [
+        "FICTIONAL OFFLINE DEMO \u2014 NOT LIVE FINDINGS"
+      ],
+      "truncated_responses": 0,
+      "truncated_page_lists": 0,
+      "failed_requests": 0
+    },
+    {
+      "snapshot": "after",
+      "summary": {
+        "http_requests": 5,
+        "pages": 2,
+        "scripts": 2,
+        "forms": 1,
+        "external_hosts": 2,
+        "transport_failures": 0
+      },
+      "max_pages": 5,
+      "request_budget": 20,
+      "limitations": [
+        "FICTIONAL OFFLINE DEMO \u2014 NOT LIVE FINDINGS"
+      ],
+      "truncated_responses": 0,
+      "truncated_page_lists": 0,
+      "failed_requests": 0
+    }
+  ]
+}
