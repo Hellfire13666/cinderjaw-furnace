@@ -7,7 +7,7 @@
 A public web footprint harvester with burnt-orange live output and a bone-white-on-charcoal evidence report. Independent from MAILTHORN, RosieRiot Overdrive and every existing lab tool. Entry point: `cinderjaw_harvester.py`. Python 3.9+ standard library only; no pip or API keys. It retrieves public web content directly, so collection requests are visible to the website.
 
 ## ONE-PASTE INSTALL & OPEN
-Download `CINDERJAW-FURNACE-v0.2.0.zip` to Downloads. Paste this entire block into your MX Linux / Ubuntu terminal:
+Download `CINDERJAW-FURNACE-v0.2.0.zip` to Downloads. Paste this entire block into your Debian-based Linux terminal:
 
 ```bash
 cd "$HOME/Downloads" &&
@@ -24,9 +24,13 @@ Requires installed Python 3.9+. No sudo needed. Creates an independent versioned
 
 Compare two CINDERJAW collection JSON reports from the same exact target URL. No network requests. Reports list newly observed and not-observed-again scripts, stylesheets, frames, forms, links, pages and external hosts. Compare policy text and selected security/technology headers on shared successful responses. Each report includes both snapshots' coverage, failures, truncation and limits; missing observations are not labeled deleted or vulnerable.
 
-The comparison's TXT/JSON/HTML outputs include input file paths and SHA256 hashes. Input snapshots are not changed. Collector versions v0.1.0 and v0.2.0 share the supported collection schema. This is a structural inventory diff, not byte-for-byte page comparison or a security verdict. Policy comparisons only cover files present in both snapshots; other policy presence changes can be checked in source reports. Header absence is an observation; request failures are excluded from header comparisons. It accepts reports up to 25 MiB each and requires matching exact target strings. Differences in ordering are ignored; same URLs are deduplicated.
+The comparison's TXT/JSON/HTML outputs include input filenames and SHA256 hashes. Input snapshots are not changed. Collector versions v0.1.0 and v0.2.0 share the supported collection schema. This is a structural inventory diff, not byte-for-byte page comparison or a security verdict. Policy comparisons only cover files present in both snapshots; other policy presence changes can be checked in source reports. Header absence is an observation; request failures are excluded from header comparisons. It accepts reports up to 25 MiB each and requires matching exact target strings. Differences in ordering are ignored; same URLs are deduplicated.
 
 Menu option **5** asks for BEFORE and AFTER JSON file paths and saves a comparison. A fully fictional pair and a sample comparison are included in `examples/`. Preview artwork is preserved in `assets/CINDERJAW-concept-preview.png`; its v0.1.0 label describes the original concept, not a screenshot of v0.2.0.
+
+## Real-world public examples
+
+[Karmasec.com tested examples](KARMASEC_PUBLIC_EXAMPLES.md)
 
 ## Choose your bite
 
@@ -59,7 +63,7 @@ This is bounded collection, not all available intelligence. Requests may time ou
 ## Demo and verification
 `DEMO_CINDERJAW.py` uses fictional fixtures with no network calls. It demonstrates 5 HTTP fixture requests, 2 HTML pages, 1 script URL, 1 form, 2 external hosts, robots exclusions and a disclosure policy. Optional generated demo reports are clearly marked fictional.
 
-22 tests passed (14 collector tests plus 8 comparison tests): URL canonicalization/validation, action/query filtering, HTML extraction, base-URL handling, sitemap parsing/capping, robots compliance, request budget, unavailable-robots stop, escaped reports/overwrite protection, cross-origin redirect/429 stop tests, plus a real local HTTP server test verifying redirect recording and cookie-value omission. Local transport tests do not prove internet connectivity or MX desktop integration. The build-environment remote smoke test timed out at robots.txt and stopped with an explicit transport failure. Successful remote collection is not yet verified on your computer. Not published to GitHub.
+22 tests passed (14 collector tests plus 8 comparison tests): URL canonicalization/validation, action/query filtering, HTML extraction, base-URL handling, sitemap parsing/capping, robots compliance, request budget, unavailable-robots stop, escaped reports/overwrite protection, cross-origin redirect/429 stop tests, plus a real local HTTP server test verifying redirect recording and cookie-value omission. Local transport tests do not prove internet connectivity or Linux desktop integration. The build-environment remote smoke test timed out at robots.txt and stopped with an explicit transport failure. Live public collection and AFTERBURN comparison were verified on Debian-based Linux. Published on GitHub.
 
 Exit codes: 0 = at least one page collected with no transport failures; 1 = transport failure(s); 2 = no pages/argument/file error; 130 = interrupted. HTTP 4xx/5xx remain response statuses in evidence rather than transport failures; inspect the report and limitations.
 
